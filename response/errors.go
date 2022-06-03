@@ -33,3 +33,17 @@ func NewValidationError(message string) *ErrorReponse {
 		Code:    http.StatusUnprocessableEntity,
 	}
 }
+
+func NewAuthenticationError(message string) *ErrorReponse {
+	return &ErrorReponse{
+		Message: message,
+		Code:    http.StatusUnauthorized,
+	}
+}
+
+func NewForbiddenError(message string) *ErrorReponse {
+	return &ErrorReponse{
+		Message: message,
+		Code:    http.StatusForbidden,
+	}
+}
