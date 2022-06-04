@@ -47,3 +47,10 @@ func NewForbiddenError(message string) *ErrorReponse {
 		Code:    http.StatusForbidden,
 	}
 }
+
+func NewBadRequestError(message string) *ErrorReponse {
+	return &ErrorReponse{
+		Message: message,
+		Code:    http.StatusBadRequest,
+	}
+}
